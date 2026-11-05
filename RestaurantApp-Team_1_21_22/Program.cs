@@ -18,11 +18,11 @@ namespace RestaurantApp_Team_1_21_22
         static List<Restaurant> restaurants = new List<Restaurant>
     {
         new Restaurant { Name = "BergerKing", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "", Type = "Japanese", Rating = 4.8 },
-        new Restaurant { Name = "", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "TeeNoi888", Type = "Suki", Rating = 4.7 },
+        new Restaurant { Name = "Sushi67", Type = "Japanese", Rating = 4.8 },
+        new Restaurant { Name = "BegerDogChinese", Type = "Fast Food", Rating = 4.2 },
+        new Restaurant { Name = " Bami Nong 888", Type = "Suki", Rating = 4.7 },
+        new Restaurant { Name = "DogSushiManggon", Type = "Japanese", Rating = 4.8 }
     };
 
         static void Main(string[] args)
@@ -62,6 +62,15 @@ namespace RestaurantApp_Team_1_21_22
         static void AddRestaurant()
         {
             Console.WriteLine("Not completed");
+            foreach (Restaurant r in restaurants)
+            {
+                Console.WriteLine(
+                            r.Name + " | " +
+                            r.Type + " | " +
+                            r.Rating
+                            );
+
+            }
         }
 
         // คน B รับผิดชอบ
