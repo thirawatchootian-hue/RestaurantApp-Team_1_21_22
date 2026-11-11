@@ -73,8 +73,33 @@ namespace RestaurantApp_Team_1_21_22
         // คน C รับผิดชอบ
         static void ShowSummary()
         {
-            Console.WriteLine("Not completed");
-        }
+            if (restaurants == null || restaurants.Count == 0)
+            {
+                Console.WriteLine("ไม่มีข้อมูลร้านอาหารในระบบ");
+                return;
+            }
+
+            Restaurant maxRestaurant = restaurants[0];
+            Restaurant minRestaurant = restaurants[0];
+
+            foreach (Restaurant r in restaurants)
+            {
+                if (r.Rating > maxRestaurant.Rating)
+                {
+                    maxRestaurant = r;
+                }
+
+                if (r.Rating < minRestaurant.Rating)
+                {
+                    minRestaurant = r;
+                }
+            }
+
+            Console.WriteLine($"ร้านคะแนนสูงสุด: {maxRestaurant.Name} ({maxRestaurant.Rating} คะแนน)");
+            Console.WriteLine($"ร้านคะแนนต่ำสุด: {minRestaurant.Name} ({minRestaurant.Rating} คะแนน)");
+        
+
     }
+}
 
 }
